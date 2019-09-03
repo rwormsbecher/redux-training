@@ -1,13 +1,127 @@
+:root {
+	font-size: 62.5%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 1.6rem;
+	letter-spacing: 0;
+	line-height: 1.5;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+ul {
+	padding: 0;
+
+	max-width: 30rem;
+	min-width: 30rem;
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+}
+
+.App {
+	display: block;
+	width: 120rem;
+	margin: 5rem auto;
+}
+
+ul li {
+	list-style-type: none;
+	border-bottom: 0.1rem solid grey;
+
+	padding: 1rem;
+	margin: 0;
+}
+
+nav {
+	display: inline-block;
+	margin-left: 5rem;
+	width: 30rem;
+}
+
+li:hover {
+	background: lightgrey;
+	cursor: pointer;
+}
+
+.showcase-wrapper {
+	border: 0.1rem solid grey;
+	display: inline-block;
+	vertical-align: top;
+	margin: 1.6rem 0 0 10rem;
+	width: 70rem;
+	padding: 1rem;
+}
+
+.showcase-wrapper img {
+	max-width: 70rem;
+	margin-bottom: 1rem;
+}
+
+.active-city {
+	background: #c00000;
+	color: white;
+}
+
+.btn {
+	padding: 1rem 3rem;
+	background: #c00000;
+	color: white;
+	border: 0.1rem solid #b00000;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.btn:hover {
+	background: #f00000;
+}
+
+.sign-up-form {
+	width: 42rem;
+	margin: 1.5rem auto 0 10rem;
+	padding: 5rem;
+	font-size: 1.7rem;
+	background: #e6e6e6;
+	border: 1px solid #d2d2d2;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.sign-up-form input {
+	width: 100%;
+	display: block;
+	margin: 0 0 2rem 0;
+	padding: 0.4rem 0.8rem 0.6rem;
+	font-size: 1.4rem;
+}
+.sign-up-form label {
+	font-size: 1.4rem;
+	display: block;
+	margin-bottom: 0.7rem;
+}
+.sign-up-form .input-feedback {
+	color: #dc3545;
+	font-style: italic;
+	margin: 0.1rem 0 0.3rem;
+	font-size: 1.2rem;
+}
+
+.sign-up-form button:disabled,
+button[disabled] {
+	background: lightgrey;
+	border: 1px solid darkgrey;
+	cursor: not-allowed;
+}
+
+.btn-cancel {
+	margin-left: 2.5rem;
 }
