@@ -2,8 +2,10 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import applicationReducer from '../reducers/applicationReducer';
+import citiesReducer from '../reducers/cityReducer';
 
 const rootReducer = combineReducers({
+	citiesSlice: citiesReducer,
 	applicationSlice: applicationReducer
 });
 
