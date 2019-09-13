@@ -2,6 +2,9 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
+import { connect } from 'react-redux';
+import { SetShowcase } from '../redux/actions/applicationActions';
+
 class AddCityForm extends React.Component {
 	render() {
 		let { values, errors } = this.props;
@@ -100,7 +103,7 @@ class AddCityForm extends React.Component {
 								</button>
 								<button
 									className='btn btn-cancel'
-									onClick={() => this.props.cancelAddCity('showcase')}
+									onClick={() => this.props.SetShowcase()}
 								>
 									Cancel
 								</button>
@@ -113,4 +116,7 @@ class AddCityForm extends React.Component {
 	}
 }
 
-export default AddCityForm;
+export default connect(
+	null,
+	{ SetShowcase }
+)(AddCityForm);

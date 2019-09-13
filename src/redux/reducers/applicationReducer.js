@@ -1,4 +1,7 @@
-import { SET_STATE_TO_ADD_CITY } from '../actions/applicationActions';
+import {
+	SET_STATE_TO_ADD_CITY,
+	SET_STATE_TO_SHOWCASE
+} from '../actions/applicationActions';
 
 const initialState = {
 	mode: 'showcase'
@@ -10,6 +13,13 @@ const ApplicationReducer = (state = initialState, action) => {
 			return {
 				...state,
 				mode: 'addCity'
+			};
+		}
+
+		case SET_STATE_TO_SHOWCASE: {
+			return {
+				...state,
+				mode: 'showcase'
 			};
 		}
 
