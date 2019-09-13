@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { SetCity } from '../redux/actions/applicationActions';
 
 class AddButtonComponent extends React.Component {
 	render() {
 		const content =
 			this.props.mode === 'showcase' ? (
-				<button className='btn' onClick={() => this.props.setMode('addCity')}>
+				<button className='btn' onClick={() => this.props.SetCity()}>
 					Add city
 				</button>
 			) : null;
@@ -13,4 +15,7 @@ class AddButtonComponent extends React.Component {
 	}
 }
 
-export default AddButtonComponent;
+export default connect(
+	null,
+	{ SetCity }
+)(AddButtonComponent);
